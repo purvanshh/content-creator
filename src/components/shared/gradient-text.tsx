@@ -7,18 +7,24 @@ import { cn } from "@/lib/utils";
 interface GradientTextProps {
     children: ReactNode;
     className?: string;
-    variant?: "dark" | "light";
+    variant?: "default" | "light" | "cyan" | "aurora";
     animate?: boolean;
 }
 
 export function GradientText({
     children,
     className,
-    variant = "dark",
+    variant = "default",
     animate = true,
 }: GradientTextProps) {
-    const gradientClass =
-        variant === "dark" ? "gradient-text" : "gradient-text-light";
+    const variantClasses = {
+        default: "gradient-text",
+        light: "gradient-text-light",
+        cyan: "gradient-text-cyan",
+        aurora: "gradient-text-aurora",
+    };
+
+    const gradientClass = variantClasses[variant];
 
     if (animate) {
         return (

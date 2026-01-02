@@ -1,6 +1,8 @@
 "use client";
 
 import { WebGLShader } from "@/components/ui/web-gl-shader";
+import { NoiseOverlay } from "@/components/ui/noise-overlay";
+import { Navbar } from "@/components/navigation/navbar";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ExpertiseSection } from "@/components/sections/expertise-section";
 import { AudienceSection } from "@/components/sections/audience-section";
@@ -14,6 +16,12 @@ export default function HomePage() {
     <>
       {/* Global WebGL Shader Background */}
       <WebGLShader />
+      
+      {/* Noise texture overlay for depth */}
+      <NoiseOverlay />
+
+      {/* Navigation */}
+      <Navbar />
 
       {/* All content floats above the shader */}
       <main className="relative z-10">

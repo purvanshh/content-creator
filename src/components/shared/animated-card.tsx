@@ -60,9 +60,9 @@ export function AnimatedCard({
             viewport={{ once: true, margin: "-50px" }}
             custom={{ delay, index }}
             className={cn(
-                "glass-card rounded-2xl p-6 shadow-xl transform-style-3d gpu-accelerate",
-                "backdrop-blur-xl border border-white/30",
-                "hover:border-white/50 transition-all duration-300",
+                "bento-card rounded-2xl p-6 shadow-xl transform-style-3d gpu-accelerate",
+                "backdrop-blur-xl border border-white/5",
+                "hover:border-purple-500/20 transition-all duration-300",
                 className
             )}
             style={{
